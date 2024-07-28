@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Login to Naukari.com is sucessfull.]]>
+    </line>
+    <line>
+      <![CDATA[Update headline of profile Naukari.com is sucessfull.]]>
+    </line>
+    <line>
+      <![CDATA[Logout from Naukari.com is sucessfull.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-07-28T21:11:25 IST" name="Default suite" finished-at="2024-07-28T21:11:32 IST" duration-ms="6969">
+    <groups>
+    </groups>
+    <test started-at="2024-07-28T21:11:25 IST" name="Default test" finished-at="2024-07-28T21:11:32 IST" duration-ms="6969">
+      <class name="Com.naukari.Naukari.com.UpdateProfile">
+        <test-method signature="Login_naukariCom()[pri:1, instance:Com.naukari.Naukari.com.UpdateProfile@7692cd34]" started-at="2024-07-28T21:11:25 IST" name="Login_naukariCom" finished-at="2024-07-28T21:11:28 IST" duration-ms="2569" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to Naukari.com is sucessfull.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Login_naukariCom -->
+        <test-method signature="updateHeadline_in_Profile()[pri:2, instance:Com.naukari.Naukari.com.UpdateProfile@7692cd34]" started-at="2024-07-28T21:11:28 IST" name="updateHeadline_in_Profile" finished-at="2024-07-28T21:11:31 IST" duration-ms="3220" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Update headline of profile Naukari.com is sucessfull.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- updateHeadline_in_Profile -->
+        <test-method signature="LogoutFromNaukari()[pri:3, instance:Com.naukari.Naukari.com.UpdateProfile@7692cd34]" started-at="2024-07-28T21:11:31 IST" name="LogoutFromNaukari" finished-at="2024-07-28T21:11:32 IST" duration-ms="1008" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logout from Naukari.com is sucessfull.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LogoutFromNaukari -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Com.naukari.Naukari.com.UpdateProfile@7692cd34]" started-at="2024-07-28T21:11:32 IST" name="TearDown" finished-at="2024-07-28T21:11:32 IST" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- Com.naukari.Naukari.com.UpdateProfile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

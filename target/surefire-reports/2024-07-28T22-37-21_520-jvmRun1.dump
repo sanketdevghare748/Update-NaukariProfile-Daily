@@ -1,0 +1,115 @@
+# Created at 2024-07-28T22:37:23.560
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (34668@DTP-SDE47-IND):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.24/java.lang.ProcessImpl.waitForTimeoutInterruptibly(Native Method)
+        at java.base@11.0.24/java.lang.ProcessImpl.waitFor(ProcessImpl.java:583)
+        at app//org.openqa.selenium.os.ExternalProcess.waitFor(ExternalProcess.java:277)
+        at app//org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:141)
+        at app//org.openqa.selenium.manager.SeleniumManager.getBinaryPaths(SeleniumManager.java:247)
+        at app//org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:102)
+        at app//org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+        at app//org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+        at app//Com.naukari.Naukari.com.UpdateProfile.<init>(UpdateProfile.java:26)
+        at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at java.base@11.0.24/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+        at java.base@11.0.24/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.base@11.0.24/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+        at app//org.testng.internal.ObjectFactoryImpl.newInstance(ObjectFactoryImpl.java:23)
+        at app//org.testng.internal.InstanceCreator.instantiateUsingDefaultConstructor(InstanceCreator.java:193)
+        at app//org.testng.internal.InstanceCreator.createInstanceUsingObjectFactory(InstanceCreator.java:113)
+        at app//org.testng.internal.InstanceCreator.createInstance(InstanceCreator.java:79)
+        at app//org.testng.internal.ClassImpl.getDefaultInstance(ClassImpl.java:109)
+        at app//org.testng.internal.ClassImpl.getInstances(ClassImpl.java:167)
+        at app//org.testng.TestClass.getInstances(TestClass.java:102)
+        at app//org.testng.TestClass.initTestClassesAndInstances(TestClass.java:82)
+        at app//org.testng.TestClass.init(TestClass.java:74)
+        at app//org.testng.TestClass.<init>(TestClass.java:39)
+        at app//org.testng.TestRunner.initMethods(TestRunner.java:459)
+        at app//org.testng.TestRunner.init(TestRunner.java:338)
+        at app//org.testng.TestRunner.init(TestRunner.java:291)
+        at app//org.testng.TestRunner.<init>(TestRunner.java:179)
+        at app//org.testng.SuiteRunner$DefaultTestRunnerFactory.newTestRunner(SuiteRunner.java:613)
+        at app//org.testng.SuiteRunner.init(SuiteRunner.java:178)
+        at app//org.testng.SuiteRunner.<init>(SuiteRunner.java:112)
+        at app//org.testng.TestNG.createSuiteRunner(TestNG.java:1275)
+        at app//org.testng.TestNG.createSuiteRunners(TestNG.java:1251)
+        at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1100)
+        at app//org.testng.TestNG.runSuites(TestNG.java:1039)
+        at app//org.testng.TestNG.run(TestNG.java:1007)
+        at app//org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+        at app//org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+        at app//org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.24/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@11.0.24/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+        at java.base@11.0.24/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.24/java.lang.Object.wait(Native Method)
+        at java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@11.0.24/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.24/java.lang.Object.wait(Native Method)
+        at java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.24/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+        at java.base@11.0.24/java.lang.Thread.run(Thread.java:834)
+        at java.base@11.0.24/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.24/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.24/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+        at java.base@11.0.24/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+        at java.base@11.0.24/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@11.0.24/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@11.0.24/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+        at java.base@11.0.24/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11.0.24/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.24/java.lang.Thread.run(Thread.java:834)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@11.0.24/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@11.0.24/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@11.0.24/java.lang.Thread.run(Thread.java:834)
+
+"External Process Output Forwarder - C:\Users\SDE47\.cache\selenium\manager\0.4.22\selenium-manager.exe" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.24/java.io.FileInputStream.readBytes(Native Method)
+        at java.base@11.0.24/java.io.FileInputStream.read(FileInputStream.java:279)
+        at java.base@11.0.24/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+        at java.base@11.0.24/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+        at java.base@11.0.24/java.io.InputStream.transferTo(InputStream.java:704)
+        at app//org.openqa.selenium.os.ExternalProcess$Builder.lambda$start$0(ExternalProcess.java:211)
+        at app//org.openqa.selenium.os.ExternalProcess$Builder$$Lambda$114/0x00000008001d5840.run(Unknown Source)
+        at java.base@11.0.24/java.lang.Thread.run(Thread.java:834)
+
+
+
