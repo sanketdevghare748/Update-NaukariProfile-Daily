@@ -1,19 +1,23 @@
-name: Run TestNG Tests
+name: Run UI Tests
 
 on:
   push:
     branches:
-      - main  # Adjust based on the branch you want to trigger the workflow
-  workflow_dispatch:
-    # Enables manual triggering of the workflow
+      - main  # Adjust based on the branch you want to monitor
+  workflow_dispatch:  # Allows manual triggering
   schedule:
-    # Runs every hour
-    - cron: '0 * * * *'
+    - cron: '0 * * * *'  # Runs every hour if needed
 
 jobs:
-  test:
+  ui-test:
     runs-on: ubuntu-latest
 
+    services:
+      selenium:
+        image: selenium/standalone-chrome:latest
+        ports:
+          - 4444:4444  # Port for Selenium WebDriver
+      
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -22,17 +26,20 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '11'  # Change as needed
+        java-version: '11'
 
     - name: Install dependencies
       run: |
-        # Adjust based on your build tool
+        # Adjust this command based on your build tool
         # For Maven:
         mvn install
-        # For Gradle:
+        # For Gradle, uncomment and use:
         # gradle build
 
-    - name: Execute TestNG Tests
+    - name: Run Selenium Tests
+      env:
+        SELENIUM_HOST: selenium  # Hostname for Selenium service
+        SELENIUM_PORT: 4444      # Port for WebDriver
       run: |
-        # Using Maven to execute TestNG with the suite file
+        # This assumes you are using Maven, adjust if necessary
         mvn test -Dsurefire.suiteXmlFiles=testng.xml
