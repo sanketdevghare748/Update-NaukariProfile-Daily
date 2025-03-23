@@ -37,6 +37,9 @@ public class UpdateProfile {
 	@Test(priority = 1)
 	public void Login_naukariCom()
 	{
+		
+		System.out.println(Inputs.getproperty("email"));
+		System.out.println(Inputs.getproperty("password"));
 		driver.get("https://www.naukri.com/");
 		driver.findElement(By.id("login_Layer")).click();
 		//impilcit wait
@@ -46,9 +49,9 @@ public class UpdateProfile {
 		//wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@placeholder='Enter your active Email ID / Username']"))));
 		Wait.waituntilVisible(driver.findElement(By.xpath("//*[@placeholder='Enter your active Email ID / Username']")));
 		
-		driver.findElement(By.xpath("//*[@placeholder='Enter your active Email ID / Username']")).sendKeys(Inputs.getProperty("email"));
+		driver.findElement(By.xpath("//*[@placeholder='Enter your active Email ID / Username']")).sendKeys(Inputs.getproperty("email"));
 		
-		driver.findElement(By.xpath("//*[@placeholder='Enter your password']")).sendKeys(Inputs.getProperty("password"));
+		driver.findElement(By.xpath("//*[@placeholder='Enter your password']")).sendKeys(Inputs.getproperty("password"));
 		
 		driver.findElement(By.className("loginButton")).click();
 		Reporter.log("Login to Naukari.com is sucessfull.",true);
@@ -64,7 +67,7 @@ public class UpdateProfile {
 		driver.findElement(By.xpath("//div[@class='card mt15']//div//span[@class='edit icon'][normalize-space()='editOneTheme']")).click();
 		Wait.waituntilVisible(driver.findElement(By.id("resumeHeadlineTxt")));
 		driver.findElement(By.xpath("//textarea[@id='resumeHeadlineTxt']")).clear();
-		driver.findElement(By.xpath("//textarea[@id='resumeHeadlineTxt']")).sendKeys(Inputs.getProperty("headerInfo") + getTimeStampCurrent.getCurrentTime());
+		driver.findElement(By.xpath("//textarea[@id='resumeHeadlineTxt']")).sendKeys(Inputs.getproperty("headerInfo") + getTimeStampCurrent.getCurrentTime());
 		driver.findElement(By.xpath("//button[normalize-space()='Save']")).click();
 		
 		Reporter.log("Update headline of profile Naukari.com is sucessfull.",true);

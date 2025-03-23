@@ -8,8 +8,8 @@
     <classes>
       <class name="Com.naukari.Naukari.com.UpdateProfile">
         <methods>
-          <include name="Logout"/>
           <include name="TearDown"/>
+          <include name="updateHeadline_in_Profile"/>
         </methods>
       </class> <!-- Com.naukari.Naukari.com.UpdateProfile -->
     </classes>

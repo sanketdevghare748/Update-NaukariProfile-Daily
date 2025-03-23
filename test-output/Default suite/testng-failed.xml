@@ -6,6 +6,7 @@
       <class name="Com.naukari.Naukari.com.UpdateProfile">
         <methods>
           <include name="LogoutFromNaukari"/>
+          <include name="Login_naukariCom"/>
           <include name="TearDown"/>
           <include name="updateHeadline_in_Profile"/>
         </methods>
