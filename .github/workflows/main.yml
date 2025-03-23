@@ -1,0 +1,45 @@
+name: Run UI Tests
+
+on:
+  push:
+    branches:
+      - main  # Adjust based on the branch you want to monitor
+  workflow_dispatch:  # Allows manual triggering
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour if needed
+
+jobs:
+  ui-test:
+    runs-on: ubuntu-latest
+
+    services:
+      selenium:
+        image: selenium/standalone-chrome:latest
+        ports:
+          - 4444:4444  # Port for Selenium WebDriver
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    - name: Install dependencies
+      run: |
+        # Adjust this command based on your build tool
+        # For Maven:
+        mvn install
+        # For Gradle, uncomment and use:
+        # gradle build
+
+    - name: Run Selenium Tests
+      env:
+        SELENIUM_HOST: selenium  # Hostname for Selenium service
+        SELENIUM_PORT: 4444      # Port for WebDriver
+      run: |
+        # This assumes you are using Maven, adjust if necessary
+        mvn test -Dsurefire.suiteXmlFiles=testng.xml
