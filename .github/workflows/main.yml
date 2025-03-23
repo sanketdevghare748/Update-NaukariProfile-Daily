@@ -1,0 +1,31 @@
+name: Run TestNG Tests Hourly
+
+on:
+  schedule:
+    # Runs every hour
+    - cron: '0 * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'  # You can specify a different version if needed
+
+    - name: Install dependencies
+      run: |
+        # Adjust the following commands based on your build tool
+        # For Maven:
+        mvn install
+
+    - name: Execute TestNG Tests
+      run: |
+        # This assumes you are using Maven, adjust if using Gradle or another tool
+        mvn test -Dsurefire.suiteXmlFiles=testng.xml
