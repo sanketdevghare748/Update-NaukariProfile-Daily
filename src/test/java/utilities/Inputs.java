@@ -11,7 +11,7 @@ public class Inputs {
 		try {
 
 		    
-        FileInputStream fis= new FileInputStream("E:\\Data\\eclipse\\Naukari.com\\input.properties");
+        FileInputStream fis= new FileInputStream(System.getProperty("user.dir")+"\\input.properties");
 		    // load a properties file
 		    prop.load(fis);	
 
