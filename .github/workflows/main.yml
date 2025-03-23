@@ -1,6 +1,11 @@
-name: Run TestNG Tests Hourly
+name: Run TestNG Tests
 
 on:
+  push:
+    branches:
+      - main  # Adjust based on the branch you want to trigger the workflow
+  workflow_dispatch:
+    # Enables manual triggering of the workflow
   schedule:
     # Runs every hour
     - cron: '0 * * * *'
@@ -17,15 +22,17 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '17'  # You can specify a different version if needed
+        java-version: '11'  # Change as needed
 
     - name: Install dependencies
       run: |
-        # Adjust the following commands based on your build tool
+        # Adjust based on your build tool
         # For Maven:
         mvn install
+        # For Gradle:
+        # gradle build
 
     - name: Execute TestNG Tests
       run: |
-        # This assumes you are using Maven, adjust if using Gradle or another tool
+        # Using Maven to execute TestNG with the suite file
         mvn test -Dsurefire.suiteXmlFiles=testng.xml
