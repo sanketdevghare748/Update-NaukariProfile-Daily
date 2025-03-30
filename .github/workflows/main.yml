@@ -24,3 +24,11 @@ jobs:
 
     - name: Run TestNG Tests
       run: mvn test
+
+    - name: Deploy to server
+      if: false  # This will prevent the deployment step from running
+      uses: some/deployment-action@v1
+      with:
+        server-password: ${{ secrets.GITHUB_TOKEN }}
+        distribution: 'placeholder-value'  # Placeholder value for `distribution`
+        overwrite-settings: true
