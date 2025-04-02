@@ -19,11 +19,14 @@ jobs:
       with:
         java-version: '11'
 
-    - name: Build with Maven
-      run: mvn clean install
+    - name: Download TestNG jar
+      run: curl -L -o testng.jar https://repo1.maven.org/maven2/org/testng/testng/7.4.0/testng-7.4.0.jar
 
-    - name: Run TestNG Tests
-      run: mvn test
+    - name: Compile Java code
+      run: javac -cp "testng.jar" src/test/java/TestNGRunner.java
+
+    - name: Run TestNG tests
+      run: java -cp ".:testng.jar" org.testng.TestNG src/test/java/TestNGRunner.java
 
     - name: Deploy to server
       if: false  # This will prevent the deployment step from running
