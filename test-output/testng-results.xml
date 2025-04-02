@@ -1,47 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Login to Naukari.com is sucessfull.]]>
     </line>
     <line>
-      <![CDATA[Update headline of profile Naukari.com is sucessfull.]]>
-    </line>
-    <line>
       <![CDATA[Logout from Naukari.com is sucessfull.]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-23T12:15:41 IST" name="Default suite" finished-at="2025-03-23T12:15:54 IST" duration-ms="13180">
+  <suite started-at="2025-04-02T23:07:06 IST" name="Command line suite" finished-at="2025-04-02T23:07:31 IST" duration-ms="24578">
     <groups>
     </groups>
-    <test started-at="2025-03-23T12:15:41 IST" name="Default test" finished-at="2025-03-23T12:15:54 IST" duration-ms="13180">
+    <test started-at="2025-04-02T23:07:06 IST" name="Command line test" finished-at="2025-04-02T23:07:31 IST" duration-ms="24578">
       <class name="Com.naukari.Naukari.com.UpdateProfile">
-        <test-method signature="Login_naukariCom()[pri:1, instance:Com.naukari.Naukari.com.UpdateProfile@eadb475]" started-at="2025-03-23T12:15:41 IST" name="Login_naukariCom" finished-at="2025-03-23T12:15:49 IST" duration-ms="7287" status="PASS">
+        <test-method signature="Login_naukariCom()[pri:1, instance:Com.naukari.Naukari.com.UpdateProfile@664a9613]" started-at="2025-04-02T23:07:06 IST" name="Login_naukariCom" finished-at="2025-04-02T23:07:14 IST" duration-ms="8429" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Login to Naukari.com is sucessfull.]]>
             </line>
           </reporter-output>
         </test-method> <!-- Login_naukariCom -->
-        <test-method signature="updateHeadline_in_Profile()[pri:2, instance:Com.naukari.Naukari.com.UpdateProfile@eadb475]" started-at="2025-03-23T12:15:49 IST" name="updateHeadline_in_Profile" finished-at="2025-03-23T12:15:53 IST" duration-ms="4323" status="PASS">
+        <test-method signature="updateHeadline_in_Profile()[pri:2, instance:Com.naukari.Naukari.com.UpdateProfile@664a9613]" started-at="2025-04-02T23:07:14 IST" name="updateHeadline_in_Profile" finished-at="2025-04-02T23:07:28 IST" duration-ms="13182" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0cdb1dc9236155e813635d37aec77763)] -> xpath: //div[@class='card mt15']//div//span[@class='edit icon'][normalize-space()='editOneTheme']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\w194629\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54008}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54008/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cdb1dc9236155e813635d37aec77763]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0cdb1dc9236155e813635d37aec77763)] -> xpath: //div[@class='card mt15']//div//span[@class='edit icon'][normalize-space()='editOneTheme']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\w194629\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54008}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54008/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cdb1dc9236155e813635d37aec77763
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Com.naukari.Naukari.com.UpdateProfile.updateHeadline_in_Profile(UpdateProfile.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at TestNGRunner.main(TestNGRunner.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
-            <line>
-              <![CDATA[Update headline of profile Naukari.com is sucessfull.]]>
-            </line>
           </reporter-output>
         </test-method> <!-- updateHeadline_in_Profile -->
-        <test-method signature="LogoutFromNaukari()[pri:3, instance:Com.naukari.Naukari.com.UpdateProfile@eadb475]" started-at="2025-03-23T12:15:53 IST" name="LogoutFromNaukari" finished-at="2025-03-23T12:15:54 IST" duration-ms="1321" status="PASS">
+        <test-method signature="LogoutFromNaukari()[pri:3, instance:Com.naukari.Naukari.com.UpdateProfile@664a9613]" started-at="2025-04-02T23:07:28 IST" name="LogoutFromNaukari" finished-at="2025-04-02T23:07:30 IST" duration-ms="2650" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logout from Naukari.com is sucessfull.]]>
             </line>
           </reporter-output>
         </test-method> <!-- LogoutFromNaukari -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:Com.naukari.Naukari.com.UpdateProfile@eadb475]" started-at="2025-03-23T12:15:54 IST" name="TearDown" finished-at="2025-03-23T12:15:54 IST" duration-ms="206" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Com.naukari.Naukari.com.UpdateProfile@664a9613]" started-at="2025-04-02T23:07:30 IST" name="TearDown" finished-at="2025-04-02T23:07:31 IST" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- Com.naukari.Naukari.com.UpdateProfile -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

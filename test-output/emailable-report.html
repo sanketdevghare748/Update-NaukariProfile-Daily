@@ -8,13 +8,24 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,180</td><td></td><td></td></tr>
+<tr><th colspan="8">Command line suite</th></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">24,578</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Com.naukari.Naukari.com.UpdateProfile</td><td><a href="#m0">Login_naukariCom</a></td><td rowspan="1">1742712341816</td><td rowspan="1">7287</td></tr><tr class="passedeven"><td><a href="#m1">LogoutFromNaukari</a></td><td rowspan="1">1742712353436</td><td rowspan="1">1321</td></tr><tr class="passedeven"><td><a href="#m2">updateHeadline_in_Profile</a></td><td rowspan="1">1742712349109</td><td rowspan="1">4323</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Com.naukari.Naukari.com.UpdateProfile</td><td><a href="#m0">updateHeadline_in_Profile</a></td><td rowspan="1">1743615434981</td><td rowspan="1">13182</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Com.naukari.Naukari.com.UpdateProfile</td><td><a href="#m1">Login_naukariCom</a></td><td rowspan="1">1743615426545</td><td rowspan="1">8429</td></tr><tr class="passedeven"><td><a href="#m2">LogoutFromNaukari</a></td><td rowspan="1">1743615448165</td><td rowspan="1">2650</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Com.naukari.Naukari.com.UpdateProfile#Login_naukariCom</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Login to Naukari.com is sucessfull.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Com.naukari.Naukari.com.UpdateProfile#LogoutFromNaukari</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Logout from Naukari.com is sucessfull.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Com.naukari.Naukari.com.UpdateProfile#updateHeadline_in_Profile</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Update headline of profile Naukari.com is sucessfull.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">Com.naukari.Naukari.com.UpdateProfile#updateHeadline_in_Profile</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0cdb1dc9236155e813635d37aec77763)] -&gt; xpath: //div[@class=&apos;card mt15&apos;]//div//span[@class=&apos;edit icon&apos;][normalize-space()=&apos;editOneTheme&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\w194629\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54008}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54008/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cdb1dc9236155e813635d37aec77763
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Com.naukari.Naukari.com.UpdateProfile.updateHeadline_in_Profile(UpdateProfile.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at TestNGRunner.main(TestNGRunner.java:16)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Com.naukari.Naukari.com.UpdateProfile#Login_naukariCom</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Login to Naukari.com is sucessfull.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Com.naukari.Naukari.com.UpdateProfile#LogoutFromNaukari</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Logout from Naukari.com is sucessfull.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
